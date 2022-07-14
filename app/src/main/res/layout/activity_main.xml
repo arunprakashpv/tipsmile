@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:layout_margin="20dp"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:cardElevation="10dp"
+        app:cardCornerRadius="26dp"
+        android:layout_margin="10dp">
+
+        <EditText
+            android:id="@+id/cost_of_service"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints=""
+            android:hint="Cost of Service"
+            android:inputType="numberDecimal"
+            android:minHeight="48dp"
+            android:textColorHint="#757575"
+            android:background="@drawable/gradient"
+            android:textSize="12sp"
+            app:layout_constraintBaseline_toTopOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="HardcodedText,MissingConstraints"
+            tools:layout_editor_absoluteX="16dp" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:cardElevation="10dp"
+        app:cardCornerRadius="26dp"
+        android:layout_margin="10dp">
+        <TextView
+        android:id="@+id/service_question"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="How was the service?"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cost_of_service"
+            android:background="@drawable/gradient"
+        tools:ignore="HardcodedText"
+        android:textSize="12sp"/>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            app:cardElevation="10dp"
+            app:cardCornerRadius="26dp"
+            android:layout_margin="10dp">
+
+    <RadioGroup
+        android:id="@+id/tipOptions"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/service_question"
+        android:background="@drawable/gradient"
+        android:textSize="12sp">
+
+        <RadioButton
+
+            android:id="@+id/twenty_percent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/amazing_service_20"
+
+            android:textSize="12sp"/>
+
+        <RadioButton
+            android:id="@+id/eighteen_percent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/good_18"
+            android:textSize="12sp"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ok_15"
+            android:textSize="12sp"/>
+
+
+</RadioGroup>
+
+        </androidx.cardview.widget.CardView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+            <Switch
+                android:id="@+id/roundtip_switch"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:text="@string/round_up_the_tip"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="MissingConstraints,UseSwitchCompatOrMaterialXml"
+                android:textSize="12sp"/>
+
+
+    <Button
+        android:id="@+id/calculate_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/calculate"
+        android:background="@drawable/gradient"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/roundtip_switch" />
+
+
+
+        <TextView
+            android:id="@+id/tip_result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="125dp"
+            android:background="@drawable/gradient"
+            android:gravity="center"
+            android:text="tip amount:  %s"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/calculate_button" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</LinearLayout>

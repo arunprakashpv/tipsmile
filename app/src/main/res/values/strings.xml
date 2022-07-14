@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name" translatable="false">Tip Smile</string>
+    <string name="amazing_service_20">Amazing Service (20%)</string>
+    <string name="good_18">Good (18%)</string>
+    <string name="ok_15">ok (15%)</string>
+    <string name="round_up_the_tip">Round up the tip??</string>
+    <string name="calculate">Calculate</string>
+    <string name="tip_amount" translatable="false">tip amount:  %s</string>
+    <string name="result">tip amount:  %s</string>
+
+</resources>
